@@ -3,7 +3,7 @@ module.exports = {
   prompts: [{
     type: 'input',
     name: 'appName',
-    message: 'Please input the name of application'
+    message: 'Application name:'
   }],
   operations: [{
     type: 'mv',
