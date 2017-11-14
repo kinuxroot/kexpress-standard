@@ -8,19 +8,21 @@ module.exports = {
   operations: [{
     type: 'mv',
     args: {
-      from: 'apps/tutor',
-      to: 'apps/${template.appName}'
+      from: '${projectName}/apps/tutor',
+      to: '${projectName}/apps/${template.appName}'
     }
   }, {
     type: 'replace',
     args: {
       pattern: 'tutor',
+      of: '${projectName}',
       with: '${template.appName}'
     }
   }, {
     type: 'replace',
     args: {
       pattern: 'Tutor',
+      of: '${projectName}',
       with: {
         text: '${template.appName}',
         transform: function(appName) {
