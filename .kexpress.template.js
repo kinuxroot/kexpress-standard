@@ -15,14 +15,13 @@ module.exports = {
     type: 'replace',
     args: {
       pattern: 'tutor',
-      of: '${projectName}',
-      with: '${template.appName}'
+      with: '${template.appName}',
+      paths: ['${projectName}'],
     }
   }, {
     type: 'replace',
     args: {
       pattern: 'Tutor',
-      of: '${projectName}',
       with: {
         text: '${template.appName}',
         transform: function(appName) {
@@ -32,7 +31,8 @@ module.exports = {
 
           return parts.join('');
         }
-      }
+      },
+      paths: ['${projectName}']
     }
   }]
 };
