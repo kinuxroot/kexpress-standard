@@ -2,7 +2,7 @@ const params = {
   default: {
     host: 'localhost',
     port: 27017,
-    db: 'test',
+    db: 'tutor',
     user: '',
     password: ''
   }

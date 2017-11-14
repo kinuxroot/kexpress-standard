@@ -16,7 +16,11 @@ module.exports = {
     args: {
       pattern: 'tutor',
       with: '${template.appName}',
-      paths: ['${projectName}'],
+      paths: [
+        '${projectName}/config',
+        '${projectName}/server.js',
+        '${projectName}/apps/${template.appName}'
+      ]
     }
   }, {
     type: 'replace',
@@ -32,7 +36,11 @@ module.exports = {
           return parts.join('');
         }
       },
-      paths: ['${projectName}']
+      paths: [
+        '${projectName}/config',
+        '${projectName}/server.js',
+        '${projectName}/apps/${template.appName}'
+      ]
     }
   }]
 };
