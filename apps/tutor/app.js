@@ -53,7 +53,7 @@ class Application extends kexpress.core.app.Application {
       }
     }));
 
-    this.use('/v1/user', userRouter);
+    this.use('/user', userRouter);
   }
 }
 
