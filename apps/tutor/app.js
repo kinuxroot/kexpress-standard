@@ -22,7 +22,6 @@ class Application extends kexpress.core.app.Application {
   async prepare() {
     const session = kexpress.middlewares.session;
     const watcher = kexpress.middlewares.access.watcher;
-    const firefoxHttpRequesterFixer = kexpress.middlewares['ff-http-fixer'].firefoxHttpRequesterFixer;
     const RequestChecker = require('kexpress-http').RequestChecker;
     const FieldsCheckerErrorHandler = require('./prehandlers/fields').errorHandler;
 
@@ -52,7 +51,10 @@ class Application extends kexpress.core.app.Application {
         })
       }
     }));
+  }
 
+  // Override
+  async createRouters() {
     this.use('/user', userRouter);
   }
 }
