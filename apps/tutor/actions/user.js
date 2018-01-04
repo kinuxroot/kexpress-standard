@@ -7,6 +7,9 @@ const models = require('../models');
 const User = models.User;
 
 const actionLogin = Action.Create({
+  name: 'login',
+  summary: '用户登录',
+  description: '用户登录实现',
   prehandlers: {
     request: {
       body: {
@@ -25,6 +28,9 @@ const actionLogin = Action.Create({
       }
     },
     response: {
+      contentType: [
+        'application/json'
+      ],
       200: {
         type: 'object',
         required: true,
@@ -61,6 +67,9 @@ const actionLogin = Action.Create({
 });
 
 const actionCreateUser = Action.Create({
+  name: 'create',
+  summary: '创建用户',
+  description: '创建用户实现',
   prehandlers: {
     request: {
       body: {
@@ -98,6 +107,9 @@ const actionCreateUser = Action.Create({
 });
 
 const actionGetUser = Action.Create({
+  name: 'get',
+  summary: '获取用户信息',
+  description: '获取用户信息实现',
   prehandlers: {
     request: {
       params: {
