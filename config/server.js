@@ -1,3 +1,5 @@
+'use strict';
+
 // const privateKey  = fs.readFileSync('/path/to/private.pem', 'utf8');
 // const certificate = fs.readFileSync('/path/to/file.crt', 'utf8');
 // const credentials = {

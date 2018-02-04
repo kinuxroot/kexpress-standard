@@ -1,3 +1,5 @@
+'use strict';
+
 const params = {
   default: {
     host: 'localhost',

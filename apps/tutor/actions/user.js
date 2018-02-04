@@ -1,3 +1,5 @@
+'use strict';
+
 const kexpress = require('kexpress');
 const Action = kexpress.core.action.Action;
 
@@ -59,7 +61,7 @@ const actionLogin = Action.Create({
       }
     }
   },
-  async handler(req, res, ctx) {
+  async handler(req, res) {
     res.json({
       message: 'hello'
     });

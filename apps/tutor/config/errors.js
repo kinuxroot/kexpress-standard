@@ -1,3 +1,5 @@
+'use strict';
+
 const kexpress = require('kexpress');
 const defineLogicalErrors = kexpress.errors.defineLogicalErrors;
 

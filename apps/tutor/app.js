@@ -1,3 +1,5 @@
+'use strict';
+
 const storeConfig = require('./config/store');
 
 const path = require('path');
@@ -25,7 +27,6 @@ class Application extends kexpress.core.app.Application {
     const RequestChecker = require('kexpress-http').RequestChecker;
     const FieldsCheckerErrorHandler = require('./prehandlers/fields').errorHandler;
 
-    this.use(firefoxHttpRequesterFixer());
     this.use(session.getSession({
       db: 'sample_session',
       host: '127.0.0.1',

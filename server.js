@@ -1,3 +1,5 @@
+'use strict';
+
 const kexpress = require('kexpress');
 const serverConfig = require('./config/server');
 const Server = kexpress.core.server.Server;

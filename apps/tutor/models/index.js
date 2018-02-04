@@ -1,3 +1,5 @@
+'use strict';
+
 const User = require('./user').User;
 const Role = require('./role').Role;
 const Privilege = require('./privilege').Privilege;

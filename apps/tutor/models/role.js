@@ -1,3 +1,5 @@
+'use strict';
+
 const um = require('unique-model');
 const model = um.model;
 const types = um.type;

@@ -1,3 +1,5 @@
+'use strict';
+
 const kexpress = require('kexpress');
 const Router = kexpress.core.router.Router;
 const actions = require('../actions/user');

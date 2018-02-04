@@ -1,3 +1,5 @@
+'use strict';
+
 const ktoolkit = require('ktoolkit');
 const logger = ktoolkit.logger.output;
 const errors = require('../config/errors');
