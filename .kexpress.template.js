@@ -44,7 +44,7 @@ module.exports = {
       },
       paths: [
         '${projectName}/config',
-        '${projectName}/server.js',
+        '${projectName}/app.startup.js',
         '${projectName}/apps/${template.appName}'
       ]
     }
