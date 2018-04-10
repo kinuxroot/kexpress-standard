@@ -14,8 +14,8 @@ module.exports = {
   }, {
     type: 'mv',
     args: {
-      from: 'template.gitignore',
-      to: '.gitignore'
+      from: '${projectName}/template.gitignore',
+      to: '${projectName}/.gitignore'
     }
   }, {
     type: 'replace',
