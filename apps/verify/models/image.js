@@ -5,11 +5,13 @@ const model = um.model;
 const types = um.type;
 
 const UString = types.UString;
+const UDateTime = types.UDateTime;
 
-const Privilege = model.createModel('Privilege', {
-  name: UString(),
-}, 'privileges');
+const Image = model.createModel('Image', {
+  data: UString(),
+  createdAt: UDateTime()
+}, 'images');
 
 module.exports = {
-  Privilege
+  Image
 };

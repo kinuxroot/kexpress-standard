@@ -8,17 +8,23 @@ module.exports = {
   operations: [{
     type: 'mv',
     args: {
-      from: '${projectName}/apps/tutor',
+      from: '${projectName}/apps/verify',
       to: '${projectName}/apps/${template.appName}'
+    }
+  }, {
+    type: 'mv',
+    args: {
+      from: 'template.gitignore',
+      to: '.gitignore'
     }
   }, {
     type: 'replace',
     args: {
-      pattern: 'tutor',
+      pattern: 'verify',
       with: '${template.appName}',
       paths: [
         '${projectName}/config',
-        '${projectName}/server.js',
+        '${projectName}/app.startup.js',
         '${projectName}/apps/${template.appName}'
       ]
     }

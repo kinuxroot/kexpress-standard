@@ -1,24 +1,32 @@
 {
-  "name": "kexpress-sample",
-  "version": "1.0.0",
-  "description": "A simple sample of kexpress-sample",
-  "main": "server.js",
+  "name": "kexpress-standard",
+  "version": "1.0.0-alpha.1",
+  "description": "Recognize API server",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "cross-env KEXPRESS_ENV=prod.single node loader.js",
+    "dev": "cross-env KEXPRESS_ENV=dev node loader.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "kexpress",
-    "sample"
+    "recognize",
+    "api"
   ],
   "author": "kinuxroot",
   "license": "Apache-2.0",
+  "devDependencies": {
+    "cross-env": "^5.1.4",
+    "eslint": "^4.19.1"
+  },
   "dependencies": {
-    "kexpress": "~0.1.13",
-    "kexpress-http": "~0.0.2",
-    "kexpress-store": "~0.0.1",
-    "kexpress-store-um": "~0.0.2",
-    "unique-model": "~0.3.2",
-    "unique-model-mongodb": "~0.0.2"
+    "amqplib": "^0.5.2",
+    "connect-mongo": "^2.0.1",
+    "kexpress": "^1.0.0-alpha.9",
+    "kexpress-http": "^1.0.1",
+    "kexpress-store": "^1.0.1",
+    "kexpress-store-um": "^1.0.0",
+    "unique-model": "^0.4.1",
+    "unique-model-mongodb": "^0.1.1",
+    "uuid": "^3.2.1"
   }
 }

@@ -9,11 +9,6 @@ module.exports = defineLogicalErrors({
     message: 'Server internal exception',
     status: 500,
   },
-  UserNotFound: {
-    id: 67002,
-    message: 'User is not found',
-    status: 404,
-  },
   // If there is no status field, the default status is 500
   FieldsError: {
     id: 67003,

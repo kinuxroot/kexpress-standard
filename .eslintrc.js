@@ -15,7 +15,7 @@ module.exports = {
         // Possible errors
         'no-cond-assign': [ 'error', 'always' ],
         // 禁止console.log
-        'no-console': [ 'error' ],
+        // 'no-console': [ 'error' ],
         // 条件中禁止常量表达式
         'no-constant-condition': [ 'error' ],
         // 禁止使用debugger
@@ -62,6 +62,8 @@ module.exports = {
         'array-callback-return': [ 'error' ],
         // 禁止块域内的var
         'block-scoped-var': [ 'error' ],
+        // 类方法内必须要使用this（除了空方法）
+        // 'class-methods-use-this': [ 'error' ],
         // 返回类型具有一致性
         'consistent-return': [ 'error' ],
         // 所有逻辑块必须要有大括号
@@ -188,7 +190,7 @@ module.exports = {
         'func-call-spacing': [ 'error', 'never' ],
         // 禁止给函数表达式起名
         'func-names': [ 'error', 'never' ],
-        // 缩进2空格
+        // 缩进4空格
         'indent': [ 'error', 2, { MemberExpression: 0 } ],
         // 对象文字量键后冒号前无空格，冒号后必须有空格，只能有一个空格
         'key-spacing': [ 'error' ],
@@ -208,7 +210,7 @@ module.exports = {
         'newline-before-return': [ 'error' ],
         // 调用链换行缩进4空格
         'newline-per-chained-call': [ 'error', {
-            ignoreChainWithDepth: 4
+            ignoreChainWithDepth: 2
         }],
         // 禁止使用Array构造函数
         'no-array-constructor': [ 'error' ],
@@ -313,6 +315,8 @@ module.exports = {
         'prefer-template': [ 'error' ],
         // 禁止不使用yield调用生成器函数
         'require-yield': [ 'error' ],
+        // async函数中调用async函数必须使用await
+        // 'require-await': [ 'error' ],
         // ...后不需要空格
         'rest-spread-spacing': ['error', 'never'],
         // Symbol必须有描述
