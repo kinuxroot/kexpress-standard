@@ -1,8 +1,10 @@
+'use strict';
+
 module.exports = {
-  name: 'kexpress-standard',
+  name: 'app',
   prompts: [{
     type: 'input',
-    name: 'appName',
+    name: 'name',
     message: 'Application name:'
   }],
   operations: [{
@@ -10,12 +12,6 @@ module.exports = {
     args: {
       from: '${projectName}/apps/verify',
       to: '${projectName}/apps/${template.appName}'
-    }
-  }, {
-    type: 'mv',
-    args: {
-      from: '${projectName}/template.gitignore',
-      to: '${projectName}/.gitignore'
     }
   }, {
     type: 'replace',

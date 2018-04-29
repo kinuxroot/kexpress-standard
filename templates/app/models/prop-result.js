@@ -7,18 +7,15 @@ const types = um.type;
 const UString = types.UString;
 const UDouble = types.UDouble;
 const UDateTime = types.UDateTime;
-const UMixed = types.UMixed;
 
-const DetectResult = model.createModel('DetectResult', {
-  rect: UMixed(),
-  landmarks: UMixed(),
-  roll: UDouble(),
-  yaw: UDouble(),
-  pitch: UDouble(),
-  cropImage: UString(),
+const PropResult = model.createModel('PropResult', {
+  result: UString(),
+  age: UDouble(),
+  gender: UDouble(),
+  smile: UDouble(),
   createdAt: UDateTime()
-}, 'detectresults');
+}, 'propresults');
 
 module.exports = {
-  DetectResult
+  PropResult
 };
