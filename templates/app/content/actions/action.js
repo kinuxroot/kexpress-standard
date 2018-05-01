@@ -21,8 +21,8 @@ const {{actionName}} = Action.Create({
 });
 {{/for}}
 
-{{#for actions}}
 module.exports = {
+{{#for actions}}
   {{actionName}}
-};
 {{/for}}
+};
