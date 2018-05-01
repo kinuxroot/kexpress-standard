@@ -1,3 +1,9 @@
 # KExpress Standard Template
 
-*Notice:* This template is created for kexpress 0.1.x, if you want to test kexpress 1.0.0, please checkout the branch v1.x
+This template is created for kexpress v1.0.0-beta.1.
+If you want to create a new project from this template, please execute following command:
+
+    kexpress-cli create kinuxroot/kexpress-standard <projectName>
+    cd <projectName>
+    npm install
+    kexpress-cli init

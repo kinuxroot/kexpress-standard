@@ -1,10 +1,10 @@
 {
-  "name": "kexpress-standard",
-  "version": "1.0.0-beta.1",
+  "name": "{{project.name}}",
+  "version": "{{project.version}}",
   "description": "Recognize API server",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env KEXPRESS_ENV=prod.single KEXPRESS_APP_NAME=verify node loader.js",
+    "start": "pm2 start {{project.name}}.pm2.json",
     "dev": "cross-env KEXPRESS_ENV=dev node loader.js",
     "test": "cross-env KEXPRESS_ENV=test jest --coverage apps/verify/test/actions/face-set",
     "deploy": "cross-env KEXPRESS_ENV=prod.single KEXPRESS_COMMAND=deploy node loader.js"
@@ -13,8 +13,8 @@
     "recognize",
     "api"
   ],
-  "author": "kinuxroot",
-  "license": "Apache-2.0",
+  "author": "{{project.author}}",
+  "license": "{{project.license}}",
   "devDependencies": {
     "cross-env": "^5.1.4",
     "eslint": "^4.19.1"
