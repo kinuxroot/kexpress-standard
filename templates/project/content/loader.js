@@ -15,10 +15,15 @@ kexpressStoreUm.load({
   um
 });
 
-const startupConfig = require('./app.startup');
-const start = kexpress.master.start;
+let command = process.env.KEXPRESS_COMMAND;
+if ( !command ) {
+  command = 'start';
+}
 
-start(startupConfig)
+const startupConfig = require('./app.startup');
+const commandFunction = kexpress.master[command];
+
+commandFunction(startupConfig)
 .catch(e => {
   console.error(e);
 

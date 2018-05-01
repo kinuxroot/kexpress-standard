@@ -4,12 +4,26 @@ module.exports = {
   name: 'app',
   phases: {
     create: {
-      prompts: [{
-        type: 'input',
-        name: 'name',
-        message: 'Application name:'
-      }],
-      operations: []
+      operations: [{
+        type: 'kexpress.shelljs',
+        args: {
+          command: 'mkdir',
+          args: [
+            '-p',
+            '{{app.root}}'
+          ]
+        }
+      }, {
+        type: 'kexpress.shelljs',
+        args: {
+          command: 'cp',
+          args: [
+            '-R',
+            '{{template.root}}/content/*',
+            '{{app.root}}'
+          ]
+        }
+      }]
     },
     init: {
       operations: []

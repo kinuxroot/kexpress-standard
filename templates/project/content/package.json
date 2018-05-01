@@ -4,9 +4,10 @@
   "description": "Recognize API server",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env KEXPRESS_ENV=prod.single node loader.js",
+    "start": "pm2 start {{project.name}}.pm2.json",
     "dev": "cross-env KEXPRESS_ENV=dev node loader.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cross-env KEXPRESS_ENV=test jest --coverage apps/verify/test/actions/face-set",
+    "deploy": "cross-env KEXPRESS_ENV=prod.single KEXPRESS_COMMAND=deploy node loader.js"
   },
   "keywords": [
     "recognize",
@@ -21,8 +22,8 @@
   "dependencies": {
     "amqplib": "^0.5.2",
     "connect-mongo": "^2.0.1",
-    "kexpress": "^1.0.0-alpha.9",
-    "kexpress-http": "^1.0.1",
+    "kexpress": "^1.0.0-beta.1",
+    "kexpress-http": "^1.0.2",
     "kexpress-store": "^1.0.1",
     "kexpress-store-um": "^1.0.0",
     "unique-model": "^0.4.1",

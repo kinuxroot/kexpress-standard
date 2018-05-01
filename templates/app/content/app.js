@@ -2,7 +2,7 @@
 
 const bodyParser = require('body-parser');
 const kexpress = require('kexpress');
-const verifyRouter = require('./routes').router;
+const router = require('./routes').router;
 const RequestChecker = require('kexpress-http').RequestChecker;
 const FieldsCheckerErrorHandler = require('./prehandlers/fields').errorHandler;
 
@@ -36,7 +36,7 @@ class Application extends kexpress.core.app.Application {
 
   // Override
   async createRouters() {
-    this.use('/', verifyRouter);
+    this.use('/', router);
   }
 }
 

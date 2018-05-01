@@ -4,7 +4,7 @@ module.exports = {
   name: 'project',
   subTemplates: {
     app: {
-      instantRoot: '{{project.root}}/apps/{{app.name}}',
+      root: '{{project.root}}/apps/{{app.name}}',
       template: 'app'
     }
   },
@@ -32,7 +32,8 @@ module.exports = {
           command: 'cp',
           args: [
             '-R',
-            '{{template.templateRoot}}/content/*',
+            '{{template.root}}/content/*',
+            '{{template.root}}/content/.*',
             '{{project.root}}'
           ]
         }
