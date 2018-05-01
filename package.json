@@ -1,6 +1,6 @@
 {
   "name": "kexpress-standard",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Recognize API server",
   "main": "index.js",
   "scripts": {
