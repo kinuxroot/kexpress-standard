@@ -23,6 +23,6 @@ const {{actionName}} = Action.Create({
 
 module.exports = {
 {{#for actions}}
-  {{actionName}}
+  {{actionName}},
 {{/for}}
 };
