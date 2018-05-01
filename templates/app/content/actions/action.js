@@ -15,7 +15,6 @@ const {{actionName}} = Action.Create({
   prehandlers: prehandlers.{{actionName}},
   async handler(req, res, ctx) {
     res.json({
-      data: faceSetData
     });
   }
 });
