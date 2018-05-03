@@ -1,19 +1,17 @@
 {
   "name": "{{{project.name}}}",
   "version": "{{{project.version}}}",
-  "description": "Recognize API server",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "init": "kexpress-cli init",
     "start": "pm2 start {{{project.name}}}.pm2.json",
     "dev": "cross-env KEXPRESS_ENV=dev node loader.js",
-    "test": "cross-env KEXPRESS_ENV=test jest --coverage apps/verify/test/actions/face-set",
+    "test": "cross-env KEXPRESS_ENV=test jest --coverage apps",
     "deploy": "cross-env KEXPRESS_ENV=prod.single KEXPRESS_COMMAND=deploy node loader.js",
     "doc": "cross-env KEXPRESS_ENV=dev KEXPRESS_COMMAND=doc kexpress-cli doc rest"
   },
   "keywords": [
-    "recognize",
-    "api"
   ],
   "author": "{{{project.author}}}",
   "license": "{{{project.license}}}",
