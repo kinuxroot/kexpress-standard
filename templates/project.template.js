@@ -44,7 +44,6 @@ module.exports = {
             '{{project.root}}/package.json',
             '{{project.root}}/app.startup.js',
             '{{project.root}}/config/prod.single.js',
-            '{{project.root}}/test/http/user.http',
             '{{project.root}}/init/rest/index.js'
           ]
         }
