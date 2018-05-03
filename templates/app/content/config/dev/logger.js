@@ -1,6 +1,6 @@
 'use strict';
 
-const AppName = 'verify';
+const AppName = '{{app.name}}';
 
 module.exports = {
   appenders: {

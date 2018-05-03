@@ -2,15 +2,15 @@
 
 module.exports = {
   resave: true,
-  secret: 'oBsZLxHa6qhb1nMz',
-  key: 'recognize-api-1',
+  secret: '{{{{raw}}}}{{project.session.secret}}{{{{/raw}}}}',
+  key: '{{project.name}}-sid',
   cookie: {
     maxAge: 1000 * 60 * 60 * 24 * 30
   },
   saveUninitialized: true,
   store: {
     type: 'mongodb',
-    db: 'recognize-api-session',
+    db: '{{project.name}}-session',
     host: '127.0.0.1',
     port: 27017,
     options: {

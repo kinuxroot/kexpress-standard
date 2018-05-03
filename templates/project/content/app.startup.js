@@ -3,7 +3,7 @@
 const path = require('path');
 
 module.exports = {
-  name: '{{project.name}}',
+  name: '{{{project.name}}}',
   config: path.join(__dirname, './config'),
   // Default value: 1
   version: 1,

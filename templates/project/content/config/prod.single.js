@@ -26,7 +26,7 @@ module.exports = {
     // },
     // Default value: 80
     // port: 80,
-    root: '/home/dataee/recognize',
+    root: '/home/dataee/{{{project.name}}}',
     // Default value: [ 'index.html', 'index.htm' ]
     // index: [
     //   'index.html', 'index.htm'

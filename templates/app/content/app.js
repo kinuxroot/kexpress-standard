@@ -4,7 +4,8 @@ const bodyParser = require('body-parser');
 const kexpress = require('kexpress');
 const router = require('./routes').router;
 const RequestChecker = require('kexpress-http').RequestChecker;
-const FieldsCheckerErrorHandler = require('./prehandlers/fields').errorHandler;
+const ResponseChecker = require('kexpress-http').ResponseChecker;
+const FieldsCheckerErrorHandler = require('../../common/prehandlers/fields').errorHandler;
 
 const httpSession = require('kexpress/src/middlewares/http-session');
 const StoreManager = require('kexpress-store').StoreManager;
@@ -23,7 +24,10 @@ class Application extends kexpress.core.app.Application {
       extended: true
     }));
 
-    this.prehandle('request', new RequestChecker(FieldsCheckerErrorHandler));
+    this.prehandle('request', new RequestChecker(FieldsCheckerErrorHandler, {
+      schema: 'kexpress'
+    }));
+    this.prehandle('response', new ResponseChecker());
     this.prehandle('store', new StoreManager({
       stores: {
         default: new UniqueModelStore({

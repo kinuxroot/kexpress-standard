@@ -1,20 +1,22 @@
 {
-  "name": "{{project.name}}",
-  "version": "{{project.version}}",
+  "name": "{{{project.name}}}",
+  "version": "{{{project.version}}}",
   "description": "Recognize API server",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start {{project.name}}.pm2.json",
+    "init": "kexpress-cli init",
+    "start": "pm2 start {{{project.name}}}.pm2.json",
     "dev": "cross-env KEXPRESS_ENV=dev node loader.js",
     "test": "cross-env KEXPRESS_ENV=test jest --coverage apps/verify/test/actions/face-set",
-    "deploy": "cross-env KEXPRESS_ENV=prod.single KEXPRESS_COMMAND=deploy node loader.js"
+    "deploy": "cross-env KEXPRESS_ENV=prod.single KEXPRESS_COMMAND=deploy node loader.js",
+    "doc": "cross-env KEXPRESS_ENV=dev KEXPRESS_COMMAND=doc kexpress-cli doc rest"
   },
   "keywords": [
     "recognize",
     "api"
   ],
-  "author": "{{project.author}}",
-  "license": "{{project.license}}",
+  "author": "{{{project.author}}}",
+  "license": "{{{project.license}}}",
   "devDependencies": {
     "cross-env": "^5.1.4",
     "eslint": "^4.19.1"
@@ -22,8 +24,8 @@
   "dependencies": {
     "amqplib": "^0.5.2",
     "connect-mongo": "^2.0.1",
-    "kexpress": "^1.0.0-beta.1",
-    "kexpress-http": "^1.0.2",
+    "kexpress": "^1.0.0-beta.4",
+    "kexpress-http": "^1.0.6",
     "kexpress-store": "^1.0.1",
     "kexpress-store-um": "^1.0.0",
     "unique-model": "^0.4.1",

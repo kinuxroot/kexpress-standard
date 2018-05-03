@@ -14,7 +14,7 @@ module.exports = {
         type: 'input',
         name: 'version',
         message: 'Version:',
-        default: '1.0.0'
+        default: '1.0.0-alpha.1'
       }, {
         type: 'input',
         name: 'author',
@@ -42,7 +42,10 @@ module.exports = {
         args: {
           files: [
             '{{project.root}}/package.json',
-            '{{project.root}}/app.startup.js'
+            '{{project.root}}/app.startup.js',
+            '{{project.root}}/config/prod.single.js',
+            '{{project.root}}/test/http/user.http',
+            '{{project.root}}/init/rest/index.js'
           ]
         }
       }]

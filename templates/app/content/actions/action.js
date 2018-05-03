@@ -3,8 +3,6 @@
 const kexpress = require('kexpress');
 const Action = kexpress.core.action.Action;
 
-const errors = require('../config/errors');
-
 const prehandlers = require('./{{moduleFile}}.pspec');
 
 {{#for actions}}
@@ -18,8 +16,8 @@ const {{actionName}} = Action.Create({
     });
   }
 });
-{{/for}}
 
+{{/for}}
 module.exports = {
 {{#for actions}}
   {{actionName}},

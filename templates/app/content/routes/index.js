@@ -3,18 +3,16 @@
 const kexpress = require('kexpress');
 const Router = kexpress.core.router.Router;
 {{#for modules}}
-const {{name}}Actions = require('../actions/{{moduleFile}}');
+const {{name}}Router = require('./{{moduleFile}}').router;
 {{/for}}
 
 const router = new Router({
   name: '{{name}}',
-  description: '{{description}}'
+  description: '{{{description}}}'
 });
 
 {{#for modules}}
-{{#for actions}}
-router.{{method}}('{{{modulePath}}}{{{path}}}', {{moduleName}}Actions.{{actionName}});
-{{/for}}
+router.use('{{{path}}}', {{name}}Router);
 {{/for}}
 
 module.exports = {

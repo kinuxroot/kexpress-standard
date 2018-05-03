@@ -23,12 +23,6 @@ module.exports = {
             name: 'string*',
             description: 'string*'
           }
-        },
-        500: {
-          error: {
-            id: [ 1001 ],
-            message: 'string*'
-          }
         }
       }
     },
@@ -46,12 +40,6 @@ module.exports = {
             naem: 'string*',
             description: 'string*'
           }]
-        },
-        404: {
-          error: {
-            id: [ 1002 ],
-            message: 'string*'
-          }
         }
       }
     }
