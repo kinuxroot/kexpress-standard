@@ -17,7 +17,7 @@ module.exports = {
       base: '{{path}}',
       app: require('./apps/{{name}}/app').Application,
       config: path.join(__dirname, './apps/{{name}}/config')
-    }
+    },
   {{/for}}
   {{{{/raw}}}}
   }
