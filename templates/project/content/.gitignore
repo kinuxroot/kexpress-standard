@@ -33,3 +33,8 @@ dist
 
 *.http
 .templates
+
+apps/**/config/**/session.js
+apps/**/config/**/store.js
+config/**/session.js
+config/**/store.js
