@@ -5,7 +5,5 @@ module.exports = {
     type: 'module'
   },
   server: require('./server'),
-  store: require('./store'),
-  session: require('./session'),
   logger: require('./logger')
 };

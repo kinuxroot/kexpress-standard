@@ -28,11 +28,7 @@ module.exports = {
         args: {
           files: [
             '{{app.root}}/config/dev/logger.js',
-            '{{app.root}}/config/dev/session.js',
-            '{{app.root}}/config/dev/store.js',
             '{{app.root}}/config/prod.single/logger.js',
-            '{{app.root}}/config/prod.single/session.js',
-            '{{app.root}}/config/prod.single/store.js'
           ]
         }
       }]

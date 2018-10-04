@@ -15,7 +15,7 @@ module.exports = {
         // Possible errors
         'no-cond-assign': [ 'error', 'always' ],
         // 禁止console.log
-        // 'no-console': [ 'error' ],
+        'no-console': [ 'error' ],
         // 条件中禁止常量表达式
         'no-constant-condition': [ 'error' ],
         // 禁止使用debugger

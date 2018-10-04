@@ -1,9 +1,8 @@
 'use strict';
 
-const ktoolkit = require('ktoolkit');
-const logger = ktoolkit.logger.output;
 const kexpress = require('kexpress');
-const errors = kexpress.errors.defineLogicalErrors(require('../../config/errors'));
+const logger = kexpress.core.logger.output;
+const errors = kexpress.errors.defineLogicalErrors(require('../errors'));
 
 async function errorHandler(req, res, error) {
   logger.error(error);

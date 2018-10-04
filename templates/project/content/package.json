@@ -21,12 +21,12 @@
   },
   "dependencies": {
     "connect-mongo": "^2.0.1",
-    "kexpress": "^1.0.0-beta.4",
+    "kexpress": "^1.0.0-beta.14",
     "kexpress-http": "^1.0.6",
-    "kexpress-store": "^1.0.1",
-    "kexpress-store-um": "^1.0.0",
-    "unique-model": "^0.4.1",
+    "kexpress-store": "^1.0.5",
+    "kexpress-store-um": "^1.0.1",
+    "unique-model": "^0.4.3",
     "unique-model-mongodb": "^0.1.1",
-    "uuid": "^3.2.1"
+    "uuid": "^3.3.2"
   }
 }

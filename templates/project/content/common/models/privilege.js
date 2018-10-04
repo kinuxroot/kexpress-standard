@@ -5,14 +5,12 @@ const model = um.model;
 const types = um.type;
 
 const UString = types.UString;
-const UDateTime = types.UDateTime;
 
-const FaceSet = model.createModel('FaceSet', {
+const Privilege = model.createModel('Privilege', {
   name: UString(),
-  createdAt: UDateTime(),
-  updatedAt: UDateTime()
-}, 'facesets');
+  description: UString(),
+}, 'privileges');
 
 module.exports = {
-  FaceSet
+  Privilege
 };

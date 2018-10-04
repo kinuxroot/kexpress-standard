@@ -8,19 +8,19 @@ const UString = types.UString;
 const UDateTime = types.UDateTime;
 const UObject = types.UObject;
 
-const Face = model.createModel('Face', {
+const DObject = model.createModel('DObject', {
   externalId: UString(),
   image: UObject({
     type: 'Image'
   }),
-  faceSet: UObject({
+  objectSet: UObject({
     type: 'FaceSet'
   }),
   feature: UString(),
   createdAt: UDateTime(),
   updatedAt: UDateTime()
-}, 'face');
+}, 'objects');
 
 module.exports = {
-  Face
+  DObject
 };

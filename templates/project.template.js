@@ -38,12 +38,33 @@ module.exports = {
           ]
         }
       }, {
+        type: 'kexpress.shelljs',
+        args: {
+          command: 'mv',
+          args: [
+            '{{project.root}}/.gitignore.template',
+            '{{project.root}}/.gitignore'
+          ]
+        }
+      }, {
+        type: 'kexpress.shelljs',
+        args: {
+          command: 'mv',
+          args: [
+            '{{project.root}}/.npmignore.template',
+            '{{project.root}}/.npmignore'
+          ]
+        }
+      }, {
         type: 'kexpress.handlebars',
         args: {
           files: [
             '{{project.root}}/package.json',
             '{{project.root}}/app.startup.js',
-            '{{project.root}}/config/prod.single.js',
+            '{{project.root}}/config/dev/session.js',
+            '{{project.root}}/config/dev/store.js',
+            '{{project.root}}/config/prod.single/session.js',
+            '{{project.root}}/config/prod.single/store.js',
             '{{project.root}}/init/rest/index.js'
           ]
         }

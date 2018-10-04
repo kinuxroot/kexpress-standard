@@ -43,5 +43,7 @@ module.exports = {
         }
       }
     }]
-  }
+  },
+  store: require('./store'),
+  session: require('./session'),
 };

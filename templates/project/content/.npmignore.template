@@ -30,3 +30,11 @@ node_modules
 *.swo
 
 *.http
+.templates
+
+apps/**/config/**/session.js
+apps/**/config/**/store.js
+config/**/session.js
+config/**/store.js
+!config/example/session.js
+!config/example/store.js

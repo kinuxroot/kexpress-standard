@@ -11,7 +11,13 @@ const {{actionName}} = Action.Create({
   summary: '{{summary}}',
   description: '{{description}}',
   prehandlers: prehandlers.{{actionName}},
-  async handler(req, res, ctx) {
+  /**
+  * Action handler
+  * @param {express.core.Request} req - The HTTP request of express.
+  * @param {express.core.Response} res - The HTTP response of express.
+  * @param {kexpress.HandleContext} ctx - The context data of kexpress.
+  */
+  async handler(req, res) {
     res.json({
     });
   }
