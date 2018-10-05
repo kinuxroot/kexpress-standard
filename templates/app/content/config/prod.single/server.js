@@ -2,5 +2,6 @@
 
 module.exports = {
   protocol: 'http',
-  port: 3001
+  host: '127.0.0.1',
+  port: {{app.server.port}}
 };
