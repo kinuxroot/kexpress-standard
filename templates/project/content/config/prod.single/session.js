@@ -2,7 +2,7 @@
 
 module.exports = {
   resave: true,
-  secret: 'kajfdlsdj38mfjkk',
+  secret: '{{{project.session.secret}}}',
   key: '{{project.name}}-sid',
   cookie: {
     maxAge: 1000 * 60 * 60 * 24 * 30

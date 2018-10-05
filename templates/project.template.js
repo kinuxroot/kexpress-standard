@@ -26,6 +26,11 @@ module.exports = {
         message: 'License:',
         default: '',
       }],
+      variables: [{
+        scope: 'instance',
+        name: 'session.secret',
+        initial: '1234dsjf',
+      }],
       operations: [{
         type: 'kexpress.shelljs',
         args: {
@@ -54,6 +59,15 @@ module.exports = {
             '{{project.root}}/.npmignore.template',
             '{{project.root}}/.npmignore'
           ]
+        }
+      }, {
+        type: 'kexpress.random',
+        args: {
+          type: 'string',
+          input: [
+            'Aa0!', 16
+          ],
+          output: 'session.secret'
         }
       }, {
         type: 'kexpress.handlebars',
