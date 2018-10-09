@@ -38,5 +38,14 @@ apps/**/config/**/session.js
 apps/**/config/**/store.js
 config/**/session.js
 config/**/store.js
+config/**/master.js
+config/**/gateway.js
 !config/example/session.js
 !config/example/store.js
+!config/example/master.js
+!config/example/gateway.js
+
+upload/
+
+*.nginx.conf
+*.pm2.json

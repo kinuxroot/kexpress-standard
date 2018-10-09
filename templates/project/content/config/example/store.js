@@ -2,6 +2,6 @@
 
 module.exports = {
   default: {
-    uri: 'mongodb://localhost:27017/multi-mongo'
+    uri: 'mongodb://localhost:27017/multi-sequelize'
   }
 };

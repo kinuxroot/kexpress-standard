@@ -77,8 +77,11 @@ module.exports = {
             '{{project.root}}/app.startup.js',
             '{{project.root}}/config/dev/session.js',
             '{{project.root}}/config/dev/store.js',
+            '{{project.root}}/config/dev/master.js',
             '{{project.root}}/config/prod.single/session.js',
             '{{project.root}}/config/prod.single/store.js',
+            '{{project.root}}/config/prod.single/master.js',
+            '{{project.root}}/config/prod.single/gateway.js',
             '{{project.root}}/init/rest/index.js'
           ]
         }

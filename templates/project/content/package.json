@@ -7,9 +7,11 @@
     "init": "kexpress-cli init",
     "start": "pm2 start {{{project.name}}}.pm2.json",
     "dev": "cross-env KEXPRESS_ENV=dev node loader.js",
+    "serve": "pm2 start make-money.dev.pm2.json",
     "test": "cross-env KEXPRESS_ENV=test jest --coverage apps",
     "deploy": "cross-env KEXPRESS_ENV=prod.single KEXPRESS_COMMAND=deploy node loader.js",
-    "doc": "cross-env KEXPRESS_ENV=dev KEXPRESS_COMMAND=doc kexpress-cli doc rest"
+    "doc": "cross-env KEXPRESS_ENV=dev KEXPRESS_COMMAND=doc kexpress-cli doc rest",
+    "lint": "eslint ."
   },
   "keywords": [
   ],
@@ -17,7 +19,8 @@
   "license": "{{{project.license}}}",
   "devDependencies": {
     "cross-env": "^5.1.4",
-    "eslint": "^4.19.1"
+    "eslint": "^4.19.1",
+    "husky": "^1.1.0"
   },
   "dependencies": {
     "connect-mongo": "^2.0.1",
@@ -28,5 +31,10 @@
     "unique-model": "^0.4.3",
     "unique-model-mongodb": "^0.1.1",
     "uuid": "^3.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   }
 }
