@@ -6,6 +6,7 @@
   "scripts": {
     "init": "kexpress-cli init",
     "start": "pm2 start {{{project.name}}}.pm2.json",
+    "start:docker": "pm2-runtime start {{{project.name}}}.pm2.json",
     "dev": "cross-env KEXPRESS_ENV=dev node loader.js",
     "serve": "pm2 start make-money.dev.pm2.json",
     "test": "cross-env KEXPRESS_ENV=test jest --coverage apps",
@@ -30,7 +31,8 @@
     "kexpress-store-um": "^1.0.1",
     "unique-model": "^0.4.3",
     "unique-model-mongodb": "^0.1.1",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "pm2": "^3.5.0"
   },
   "husky": {
     "hooks": {
